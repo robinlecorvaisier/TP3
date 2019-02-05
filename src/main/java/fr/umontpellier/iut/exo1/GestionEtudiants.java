@@ -31,7 +31,7 @@ public class GestionEtudiants {
         System.out.println(depinfo);
 
         depinfo.desinscrire(lolo);
-        System.out.println(depinfo); // un seul lolo est desinscrit, car on retire l'object 
+        System.out.println(depinfo); // un seul lolo est desinscrit, car on retire l'object
 
     }
 }
