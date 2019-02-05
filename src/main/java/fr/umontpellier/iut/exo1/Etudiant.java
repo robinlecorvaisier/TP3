@@ -35,7 +35,7 @@ public class Etudiant {
 
     public String toString()
     {
-        return Nom + " " + Prenom + "\n"+
+        return "\n\n" +Nom + " " + Prenom + "\n"+
                 "Date de naissance : "+Dateofbirth.toString() + "\n" +
                 "Adresse Mail : " + Mail + "\n" +
                 "Adresse : "+Address;
