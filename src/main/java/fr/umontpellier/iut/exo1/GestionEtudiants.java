@@ -10,8 +10,11 @@ public class GestionEtudiants {
         Etudiant lolo = new Etudiant("dupoint", "toto", LocalDate.of(2013, Month.MAY, 12),"toto.dupoint@etu.umontpellier","rue pere noel");
         System.out.println(lolo);
 
-        //System.out.println(lolo == toto); ne fonctionne pas, il compare l'adresse de l'object.
+        System.out.println(lolo == toto); //revoie false car il compare l'adresse des objects et que se sont deux objects differents.
 
+        toto = lolo;
+
+        System.out.println(lolo == toto); //revoie true car toto est devenu une reference du lolo, donc pointe sur la même adresse.
 
     }
 }
