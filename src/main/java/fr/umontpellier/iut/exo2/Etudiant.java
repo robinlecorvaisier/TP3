@@ -1,6 +1,7 @@
 package fr.umontpellier.iut.exo2;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Etudiant {
 
@@ -9,6 +10,8 @@ public class Etudiant {
     private LocalDate Dateofbirth;
     private String Mail;
     private String Address;
+    private ArrayList<Note> ListeNote;
+
 
 
    /* public Etudiant (String Nom, String Prenom, LocalDate Dateofbirth)
@@ -31,6 +34,7 @@ public class Etudiant {
         Dateofbirth = dateofbirth;
         Mail = mail;
         Address = address;
+        ListeNote = new ArrayList<>();
     }
 
     public String toString()
@@ -49,6 +53,24 @@ public class Etudiant {
     {
         Mail = Prenom.toLowerCase() + "." + Nom.toLowerCase() + "@etu.umontpellier.fr";
     }*/
+    public void noter(Matiere Mat, double Val)
+    {
+        Note N = new Note(Mat, Val);
+        ListeNote.add(N);
+    }
 
+    public Double calculerMoyenne()
+    {
+        Double moy = 0.0;
+        Double coef = 0.0;
+        for (Note n: ListeNote)
+        {
+            moy += n.getvNote() * n.getMat().getCoef();
+            coef += n.getMat().getCoef();
+        }
+
+        moy = moy / coef;
+        return moy;
+    }
 
 }

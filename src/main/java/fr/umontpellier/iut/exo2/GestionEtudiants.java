@@ -31,7 +31,16 @@ public class GestionEtudiants {
         System.out.println(depinfo);
 
         depinfo.desinscrire(lolo);
-        System.out.println(depinfo); // un seul lolo est desinscrit, car on retire l'object 
+        System.out.println(depinfo); // un seul lolo est desinscrit, car on retire l'object
+
+        Professeur Jean = new Professeur("Jean", "Mi");
+        Matiere maths = new Matiere("Maths",9.0,Jean);
+        fifi.noter(maths,12.0);
+        System.out.println("\n\nmoy fifi : " + fifi.calculerMoyenne());
+        Professeur Jane = new Professeur("Jane", "Mi");
+        Matiere francais = new Matiere("Francais",3.0,Jane);
+        fifi.noter(francais,8.5);
+        System.out.println("\n\nmoy fifi : " + fifi.calculerMoyenne());
 
     }
 }
