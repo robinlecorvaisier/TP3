@@ -1,9 +1,8 @@
-package fr.umontpellier.iut.exo1;
+package fr.umontpellier.iut.exo3;
 
-        import java.time.LocalDate;
+import java.time.LocalDate;
 
 public class Etudiant {
-
     private String Nom;
     private String Prenom;
     private LocalDate Dateofbirth;
@@ -49,6 +48,5 @@ public class Etudiant {
     {
         Mail = Prenom.toLowerCase() + "." + Nom.toLowerCase() + "@etu.umontpellier.fr";
     }*/
-
 
 }
